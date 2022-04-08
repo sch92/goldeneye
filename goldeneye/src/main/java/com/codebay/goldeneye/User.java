@@ -40,7 +40,7 @@ public class User {
     }
 
     public String getEmail() {
-        String email = this.name.toLowerCase().charAt(0) + this.surname.toLowerCase() + "." + this.department.toLowerCase()+ "@" + this.office.toLowerCase() + "." + "goldeneye.com";
+        String email = this.name.replaceAll("\\s", "").toLowerCase().charAt(0) + this.surname.replaceAll("\\s", "").toLowerCase() + "." + this.department.replaceAll("\\s", "").toLowerCase()+ "@" + this.office.replaceAll("\\s", "").toLowerCase() + "." + "goldeneye.com";
         
         return email;
     }
